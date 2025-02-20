@@ -1,78 +1,98 @@
-/* General Styles */
+/* General Styling */
 body {
-  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
 }
 
-/* Container */
+/* Centered Container */
 .container {
-  width: 80%;
-  margin: auto;
-  padding: 20px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto;
+  text-align: center;
 }
 
 /* Header */
-.header {
-  text-align: center;
-  font-size: 24px;
+h1 {
+  color: #343a40;
   font-weight: bold;
-  padding: 20px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
 }
 
-/* Product List */
+/* Stylish Underline */
+h1 {
+  text-align: center;
+  color: #343a40;
+  font-weight: bold;
+  font-size: 28px;
+  margin-bottom: 30px;
+  position: relative;
+  display: block;
+}
+
+/* Product List - Flexbox Layout */
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
 }
 
 /* Product Card */
 .product-card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 280px;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .product-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Product Name */
-.product-card h3 {
-  margin: 10px 0;
+/* Product Title */
+.card-title {
   font-size: 18px;
-}
-
-/* Product Price */
-.product-card p {
-  font-size: 16px;
-  color: #007bff;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Buttons */
+/* Price Styling */
+.card-text {
+  color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Add to Cart Button */
 button {
-  background-color: #007bff;
+  background-color: #28a745;
   color: white;
   border: none;
-  padding: 10px;
-  cursor: pointer;
+  padding: 10px 25px;
   border-radius: 5px;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #218838;
 }

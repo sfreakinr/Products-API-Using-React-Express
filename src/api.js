@@ -1,19 +1,11 @@
-import axios from 'axios';
-
-const API_URL = 'https://products-api-express.onrender.com/products';
-
-
-//fetch product
-export const getProducts = async () => {
+export async function fetchProducts() {
     try {
-        const response = await axios.get(API_URL);
-        console.log("API Response:", response.data); 
-        return response.data;
+      const response = await fetch("https://products-api-express.onrender.com/products");
+      if (!response.ok) throw new Error("Failed to fetch products");
+      return await response.json();
     } catch (error) {
-        console.error('Error fetching products:', error);
-        return [];
+      console.error("Error:", error);
+      return [];
     }
-
-
-};
-
+  }
+  
